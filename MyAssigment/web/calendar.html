@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="calendar.css"  rel="stylesheet" type="text/css"/>
+        <style>
+            td {
+                border: 1px solid;
+            }
+        </style>
+    </head>
+    <body style="margin: 0px">
+        <div>
+            <p style="font-size: 36px;font-family: helvetica neue;width: 100%;height: 50px;background-color: white;margin: 0px">Class schedule</p>
+        </div>
+        <form action="dal" method="Get">
+            <div  style="background-color: white">
+                <div style="text-align: center">
+                    Campus:
+                    <select name="campus" id="campus">
+                    <option value="1">FU.HL</option>
+                    <option value="2">FU.HCM</option>
+                    <option value="3">FU.DN</option>
+                    </select><br/>
+                    Lecturer:
+                    <input class="username_border" type="text" value="Sonnt5"/>
+                    <button type="button">View</button> 
+                    <table style="margin-left: auto;margin-right: auto;width: 100%">
+                        <thead>
+                            <tr>
+                                <th style="padding-right: 100px; border: 2px solid black; background-color: pink"><span>Year</span>
+                                <select name="selectYear" >
+                                <option value="2022">2022</option>
+                                </select>
+                                <br />
+                                <span>Week</span>
+                                <select name="selectWeek">
+                                <option value="1">19/06 To 25/06</option>
+                                </select>
+                                </th>
+                                <th class="th">MON</th>
+                                <th class="th">TUE</th>
+                                <th class="th">WED</th>
+                                <th class="th">THU</th>
+                                <th class="th">FRI</th>
+                                <th class="th">SAT</th>
+                                <th class="th">SUN</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="text-align: center">Slot 1</td>
+                                <td style="text-align: left">CourseId<br>GroupID<br><a href="take_attend" style="color: green;font-size: 15px">attended</a></td>
+                                <td style="text-align: left">CourseId<br>GroupID<br><a href="take_attend" style="color: green;font-size: 15px">attended</a></td>
+                                <td style="text-align: left">CourseId<br>GroupID<br><a href="take_attend" style="color: green;font-size: 15px">attended</a></td>
+                                <td style="text-align: left">CourseId<br>GroupID<br><a href="take_attend" style="color: green;font-size: 15px">attended</a></td>
+                                <td style="text-align: left">CourseId<br>GroupID<br><a href="take_attend" style="color: green;font-size: 15px">attended</a></td>
+                                <td style="text-align: center">--</td>
+                                <td style="text-align: center">--</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center">Slot 2</td>
+                                <td style="text-align: left">CourseId<br>GroupID<br><a href="take_attend" style="color: green;font-size: 15px">attended</a></td>
+                                <td style="text-align: left">CourseId<br>GroupID<br><a href="take_attend" style="color: green;font-size: 15px">attended</a></td>
+                                <td style="text-align: left">CourseId<br>GroupID<br><a href="take_attend" style="color: green;font-size: 15px">attended</a></td>
+                                <td style="text-align: left">CourseId<br>GroupID<br><a href="take_attend" style="color: green;font-size: 15px">attended</a></td>
+                                <td style="text-align: left">CourseId<br>GroupID<br><a href="take_attend" style="color: green;font-size: 15px">attended</a></td>
+                                <td style="text-align: center">--</td>
+                                <td style="text-align: center">--</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center">Slot 3</td>
+                                <td style="text-align: left">CourseId<br>GroupID<br><a href="take_attend" style="color: green;font-size: 15px">attended</a></td>
+                                <td style="text-align: left">CourseId<br>GroupID<br><a href="take_attend" style="color: green;font-size: 15px">attended</a></td>
+                                <td style="text-align: left">CourseId<br>GroupID<br><a href="take_attend" style="color: green;font-size: 15px">attended</a></td>
+                                <td style="text-align: left">CourseId<br>GroupID<br><a href="take_attend" style="color: green;font-size: 15px">attended</a></td>
+                                <td style="text-align: left">CourseId<br>GroupID<br><a href="take_attend" style="color: green;font-size: 15px">attended</a></td>
+                                <td style="text-align: center">--</td>
+                                <td style="text-align: center">--</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center">Slot 4</td>
+                                <td style="text-align: left">CourseId<br>GroupID<br><a href="take_attend" style="color: green;font-size: 15px">attended</a></td>
+                                <td style="text-align: left">CourseId<br>GroupID<br><a href="take_attend" style="color: green;font-size: 15px">attended</a></td>
+                                <td style="text-align: left">CourseId<br>GroupID<br><a href="take_attend" style="color: green;font-size: 15px">attended</a></td>
+                                <td style="text-align: left">CourseId<br>GroupID<br><a href="take_attend" style="color: green;font-size: 15px">attended</a></td>
+                                <td style="text-align: left">CourseId<br>GroupID<br><a href="take_attend" style="color: green;font-size: 15px">attended</a></td>
+                                <td style="text-align: center">--</td>
+                                <td style="text-align: center">--</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center">Slot 5</td>
+                                <td style="text-align: left">CourseId<br>GroupID<br><a href="take_attend" style="color: green;font-size: 15px">attended</a></td>
+                                <td style="text-align: left">CourseId<br>GroupID<br><a href="take_attend" style="color: green;font-size: 15px">attended</a></td>
+                                <td style="text-align: left">CourseId<br>GroupID<br><a href="take_attend" style="color: green;font-size: 15px">attended</a></td>
+                                <td style="text-align: left">CourseId<br>GroupID<br><a href="take_attend" style="color: green;font-size: 15px">attended</a></td>
+                                <td style="text-align: left">CourseId<br>GroupID<br><a href="take_attend" style="color: green;font-size: 15px">attended</a></td>
+                                <td style="text-align: center">--</td>
+                                <td style="text-align: center">--</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center">Slot 6</td>
+                                <td style="text-align: left">CourseId<br>GroupID<br><a href="take_attend" style="color: green;font-size: 15px">attended</a></td>
+                                <td style="text-align: left">CourseId<br>GroupID<br><a href="take_attend" style="color: green;font-size: 15px">attended</a></td>
+                                <td style="text-align: left">CourseId<br>GroupID<br><a href="take_attend" style="color: green;font-size: 15px">attended</a></td>
+                                <td style="text-align: left">CourseId<br>GroupID<br><a href="take_attend" style="color: green;font-size: 15px">attended</a></td>
+                                <td style="text-align: left">CourseId<br>GroupID<br><a href="take_attend" style="color: green;font-size: 15px">attended</a></td>
+                                <td style="text-align: center">--</td>
+                                <td style="text-align: center">--</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </form>
+    </body>
+    
+</html>
